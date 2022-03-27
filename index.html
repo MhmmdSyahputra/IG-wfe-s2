@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awasome -->
+    <script src="https://kit.fontawesome.com/f9e187ccca.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        @media (min-width: 1281px) {
+            body {
+                background-color: #F0F0F0;
+            }
+
+            .container {
+                width: 70%;
+            }
+
+            .nav-mobile {
+                display: none;
+            }
+
+            .story {
+                height: 97px;
+            }
+
+            .nav-bottom-mobile {
+                display: none;
+            }
+
+            .icon {
+                outline: none;
+                background-color: #f0f0f0;
+                width: 25px;
+                border: none;
+                padding: 0px;
+                cursor: pointer;
+
+            }
+
+        }
+
+        @media (min-width: 481px) and (max-width: 1281px) {
+
+            .search-nav,
+            .nav-desktop {
+                display: none;
+            }
+
+            .wrapper::-webkit-scrollbar {
+                width: 0px;
+            }
+
+
+        }
+
+        @media (min-width: 300px) and (max-width: 480px) {
+
+            body {
+                background-color: #F8F9FA;
+            }
+
+            .image img {
+                width: 106.5%;
+            }
+
+            .icon {
+                display: none;
+            }
+
+            .story {
+                margin-top: -30px;
+                height: 75px;
+            }
+
+            .search-nav,
+            .nav-desktop {
+                display: none;
+            }
+
+            .plus,
+            .heart,
+            .messenger {
+                display: inline;
+            }
+
+            .wrapper::-webkit-scrollbar {
+                width: 0px;
+            }
+
+        }
+
+        .img-story {
+            border: 2px solid #E44660;
+        }
+
+        .fa-solid,
+        .fa-brands {
+            color: black;
+        }
+
+        .bg-light {
+            background-color: #FFFFFF;
+        }
+
+        .position-fixed {
+            margin-left: 600px;
+            width: 360px;
+        }
+
+        .wrapper {
+            max-width: 100%;
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .wrapper::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .wrapper .item {
+            min-width: 90px;
+            height: 110px;
+            line-height: 110px;
+            margin-right: 0px;
+        }
+    </style>
+
+    <title>Instagram</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="">
+            </a>
+
+            <ul class="navbar-nav search-nav">
+                <form class="d-flex " style="margin-left: 240px;">
+                    <input class="form-control  me-2" style="background-color: #f0f0f0; border-radius: 10px;"
+                        type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </ul>
+
+            <!-- NAV MOBILE -->
+            <div class="navbar nav-mobile">
+                <h4 class="plus">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-square-plus"></i></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="heart">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-heart"></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="messenger">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-brands fa-facebook-messenger"></i>&emsp;
+                    </a>
+                </h4>
+            </div>
+            <!-- END NAV MOBILE -->
+
+            <!-- NAV DESKTOP -->
+            <div class="navbar nav-desktop">
+                <h4 class="house">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-house"></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="messenger">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-brands fa-facebook-messenger"></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="plus">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-square-plus"></i></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="compas">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-compass"></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="heart">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-heart"></i>&emsp;
+                    </a>
+                </h4>
+
+                <h4 class="user">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                </h4>
+            </div>
+            <!-- END NAV DESKTOP -->
+
+        </div>
+    </nav>
+
+    <section class="content container mt-5">
+        <div class="row">
+            <div class="col-md-8 mt-5">
+                <div class="row">
+
+                    <!-- STORY -->
+                    <div class="story col-md-11 bg-light mb-3 p-0">
+                        <div>
+                            <button class="icon shadow rounded-circle" style="position: absolute; top: 115px;"
+                                onclick="scrolll()">
+                                <i class="fa-solid fa-caret-left fs-5"></i>
+                            </button>
+                            <button class="icon shadow rounded-circle"
+                                style="position: absolute; top: 115px; left: 55.8%;" onclick="scrollr()">
+                                <i class="fa-solid fa-caret-right fs-5"></i>
+                            </button>
+                        </div>
+
+                        <div class="wrapper">
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/mikro-profil.jpg" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Mikroskil</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/Me-profil.png" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">ME</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-9gag.png" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">9gag</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-jerome.jpg" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Jerome</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-dagelan.png" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Dagelan</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-bits.jpg" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Bits Mikro</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-ima.jpg" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">IMA</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-medantalk.png" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Medan Talk</p>
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <div class="item">
+                                <h1 class="text-center">
+                                    <a href="#" class="text-decoration-none">
+                                        <img src="img/profil-ml.jpg" width="50" class="img-story rounded-circle"
+                                            alt="myprofil">
+                                        <p class="text-center" style="font-size: 0.35em;">Mobile Legend</p>
+                                    </a>
+                                </h1>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END STORY -->
+
+                    <!-- POSTINGAN -->
+                    <div class="col-md-11 bg-light mb-3 ">
+                        <!-- PROFILE & NAME -->
+                        <div class="row">
+                            <div class="col-md-12" style="height: 50px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <b class="fs-2">
+                                                <img src="img/mikro-profil.jpg" width="40" class="rounded-circle"
+                                                    alt="myprofil" style="border: 2px solid #E44660;">&nbsp;
+                                            </b>
+                                        </td>
+                                        <td><label class="fs-5">Mikroskil</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END PROFILE & NAME -->
+
+                        <!-- IMAGE POSTING -->
+                        <div class="image ml-0 mb-1">
+                            <img src="https://pbs.twimg.com/media/FIuQ0Z2VIAI_F4Y?format=jpg&name=medium" width="582"
+                                style="margin-left: -11px;" alt="">
+                        </div>
+                        <!-- END IMAGE POSTING -->
+
+                        <!-- CAPTION -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- LIKE COMENT SHARE BOOK -->
+
+                                <div class="navbar">
+                                    <i id="heart2" class="fa-regular fa-heart fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-comment fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-paper-plane fs-3"></i>
+                                    <i class="fa-regular fa-bookmark ms-auto fs-3"></i>
+                                </div>
+
+                                <!-- END LIKE COMENT SHARE BOOK -->
+                            </div>
+                            <div class="col-md-12" style="height: 25px;">
+                                <p><b>1,109,189 Likes</b></p>
+                            </div>
+                            <div class="col-md-12">
+                                <p>
+                                    <b>Mikroskil</b> Webinar <br>
+                                    <label class="text-muted fs-6">View All 12,221 Comments</label>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- END CAPTION -->
+                    </div>
+                    <!-- END POSTINGAN -->
+
+                    <!-- POSTINGAN -->
+                    <div class="col-md-11 bg-light mb-3 ">
+                        <!-- PROFILE & NAME -->
+                        <div class="row">
+                            <div class="col-md-12" style="height: 50px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <b class="fs-2">
+                                                <img src="img/Me-profil.png" width="40"
+                                                    style="border: 2px solid #E44660; border: 2px solid #E44660;"
+                                                    class="rounded-circle" alt="myprofil">&nbsp;
+                                            </b>
+                                        </td>
+                                        <td><label class="fs-5">Mikroskil Esport</label></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- END PROFILE & NAME -->
+
+                        <!-- IMAGE POSTING -->
+                        <div class="image ml-0 mb-1">
+                            <img src="https://mikroskil.ac.id/uploads/event_mikroskil/d79e9f703fbad76bb2194e3632d3e4da.jpeg"
+                                width="582" style="margin-left: -11px;" alt="">
+                        </div>
+                        <!-- END IMAGE POSTING -->
+
+                        <!-- CAPTION -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- LIKE COMENT SHARE BOOK -->
+                                <div class="navbar">
+                                    <i id="heart2" class="fa-regular fa-heart fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-comment fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-paper-plane fs-3"></i>
+                                    <i class="fa-regular fa-bookmark ms-auto fs-3"></i>
+                                </div>
+                                <!-- END LIKE COMENT SHARE BOOK -->
+                            </div>
+                            <div class="col-md-12" style="height: 25px;">
+                                <p><b>100,189 Likes</b></p>
+                            </div>
+                            <div class="col-md-12">
+                                <p><b>Mikroskil Esport</b> Tournamen <br>
+                                    <label class="text-muted fs-6">View All 4,221 Comments</label>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- END CAPTION -->
+                    </div>
+                    <!-- END POSTINGAN -->
+
+                    <!-- POSTINGAN -->
+                    <div class="col-md-11 bg-light mb-5 ">
+                        <!-- PROFILE & NAME -->
+                        <div class="row">
+                            <div class="col-md-12" style="height: 50px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <b class="fs-2">
+                                                <i class="fa-solid fa-circle-user"></i>&nbsp;
+                                            </b>
+                                        </td>
+                                        <td><label class="fs-5">Jess No Limit</label></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- END PROFILE & NAME -->
+
+                        <!-- IMAGE POSTING -->
+                        <div class="image ml-0 mb-1">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitRoAhIrXPPXyTKL3ccloLFllkRlDNAGA-Q&usqp=CAU"
+                                width="582" style="margin-left: -11px;" alt="">
+                        </div>
+                        <!-- END IMAGE POSTING -->
+
+                        <!-- CAPTION -->
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <!-- LIKE COMENT SHARE BOOK -->
+                                <div class="navbar">
+                                    <i id="heart2" class="fa-regular fa-heart fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-comment fs-3"></i> &emsp;
+                                    <i class="fa-regular fa-paper-plane fs-3"></i>
+                                    <i class="fa-regular fa-bookmark ms-auto fs-3"></i>
+                                </div>
+                                <!-- END LIKE COMENT SHARE BOOK -->
+                            </div>
+                            <div class="col-md-12" style="height: 25px;">
+                                <p><b>10,389 Likes</b></p>
+                            </div>
+                            <div class="col-md-12">
+                                <p><b>Jess No Limit</b> Cartun <br>
+                                    <label class="text-muted fs-6">View All 1,221 Comments</label>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- END CAPTION -->
+                    </div>
+                    <!-- END POSTINGAN -->
+                </div>
+            </div>
+
+            <!-- CONTENT KANAN DESKTOP -->
+            <div class="col-md-4 mt-5 position-fixed" style="background-color: #f0f0f0;">
+                <table cellpadding="5">
+                    <tr>
+                        <td rowspan="2">
+                            <b class="display-4">
+                                <img src="img/myprofil.png" width="50" class="rounded-circle" alt="myprofil">
+                            </b>
+                        </td>
+                        <td class="fs-6" width="260">Muhammad Syahputra <br> putra</td>
+                        <td rowspan="2" width="100" align="right"><a href="#" class="text-decoration-none">Switch</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td width="260">
+                            <h6 class="mt-3 float-left">
+                                <label style="color: #909090;">Suggestions For You</label>
+                            </h6>
+                        </td>
+                        <td width="100" align="right">
+                            <h6 class="mt-3 float-right">
+                                <label style="color: #909090;">See All</label>
+                            </h6>
+                        </td>
+                    </tr>
+                </table>
+
+                <table cellpadding="5">
+                    <tr>
+                        <td><b class="display-6"><i class="fa-solid fa-circle-user"></i></b>
+                        </td>
+                        <td class="fs-6" width="260">Wahyu</td>
+                        <td width="100" align="right"><a href="#" class="text-decoration-none">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><b class="display-6"><i class="fa-solid fa-circle-user"></i></b>
+                        </td>
+                        <td class="fs-6" width="260">Edy</td>
+                        <td width="100" align="right"><a href="#" class="text-decoration-none">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><b class="display-6"><i class="fa-solid fa-circle-user"></i></b>
+                        </td>
+                        <td class="fs-6" width="260">Rangga</td>
+                        <td width="100" align="right"><a href="#" class="text-decoration-none">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><b class="display-6"><i class="fa-solid fa-circle-user"></i></b>
+                        </td>
+                        <td class="fs-6" width="260">Vadil</td>
+                        <td width="100" align="right"><a href="#" class="text-decoration-none">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><b class="display-6"><i class="fa-solid fa-circle-user"></i></b>
+                        </td>
+                        <td class="fs-6" width="260">Pak Acep</td>
+                        <td width="100" align="right"><a href="#" class="text-decoration-none">Follow</a></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- END CONTENT KANAN DESKTOP -->
+
+            <!-- NAV BOTTOM MOBILE -->
+            <div class="col-md-7">
+                <div class="navbar nav-bottom-mobile fixed-bottom p-3 bg-light">
+                    <h4 class="house">
+                        <a href="#" class="text-decoration-none">
+                            <i class="fa-solid fa-house"></i>&emsp;
+                        </a>
+                    </h4>
+
+                    <h4 class="search">
+                        <a href="#" class="text-decoration-none">
+                            <i class="fa-solid fa-magnifying-glass"></i>&emsp;
+                        </a>
+                    </h4>
+
+                    <h4 class="play">
+                        <a href="#" class="text-decoration-none">
+                            <i class="fa-solid fa-clapperboard"></i>&emsp;
+                        </a>
+                    </h4>
+
+                    <h4 class="bag">
+                        <a href="#" class="text-decoration-none">
+                            <i class="fa-solid fa-bag-shopping"></i></i>&emsp;
+                        </a>
+                    </h4>
+
+                    <h4 class="user">
+                        <a href="#" class="text-decoration-none">
+                            <img src="img/myprofil.png" width="30" class="rounded-circle" alt="myprofil">
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <!-- END NAV BOTTOM MOBILE -->
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        function scrolll() {
+            let left = document.querySelector(".wrapper");
+            left.scrollBy(-350, 0)
+        }
+        function scrollr() {
+            let right = document.querySelector(".wrapper");
+            right.scrollBy(350, 0)
+        }
+
+
+        $(document).ready(function () {
+            $("#heart2").click(function () {
+                // $("#heart").toggleClass("heartred");
+                $("#heart2").toggleClass("heartred");
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>
